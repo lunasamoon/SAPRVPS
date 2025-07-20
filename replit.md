@@ -111,7 +111,7 @@ The application uses three main database tables:
 - **Fixed Standalone Server ES Module Issues**: Resolved critical CommonJS/ES module compatibility problems
   - Converted server-standalone.js from ES module imports to CommonJS require statements
   - Fixed async/await usage in dependency initialization functions
-  - Corrected __dirname definition for proper file path resolution
+  - Fixed __dirname variable redeclaration error (removed duplicate declaration)
   - Standalone server now compatible with Node.js without "type": "module" requirement
 - **Enhanced Docker RTMP Configuration**: Implemented robust nginx RTMP module handling
   - Updated docker-entrypoint-standalone.sh with intelligent RTMP module detection
@@ -123,6 +123,12 @@ The application uses three main database tables:
   - Detailed RTMP module installation guide for different operating systems
   - Troubleshooting section for common nginx configuration issues
   - Clear explanation of streaming capabilities with and without RTMP module
+- **Created Automated Installation Script**: Built install-sa-plays-replit.sh for one-command deployment
+  - Detects OS automatically (Ubuntu/Debian/CentOS/RHEL)
+  - Installs all system dependencies (Node.js 20, PostgreSQL, FFmpeg, Nginx)
+  - Sets up database with secure credentials
+  - Creates systemd service and configures firewall
+  - Complete deployment automation for external servers
 
 ### July 19, 2025 - Standalone Server Issues Fixed and Fully Operational
 - **Column Naming Database Error Fixed**: Resolved PostgreSQL column naming issues in standalone server

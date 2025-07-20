@@ -8,7 +8,7 @@ const fs = require('fs');
 const pg = require('pg');
 const multer = require('multer');
 
-const __dirname = path.dirname(require.main.filename);
+// __dirname is already available in CommonJS modules
 
 // Simple ID generator (fallback if nanoid fails)
 function generateId() {
