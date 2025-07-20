@@ -42,7 +42,7 @@ const { Pool } = pg;
 
 const app = express();
 const server = createServer(app);
-const port = process.env.STANDALONE_PORT || 3000;
+const port = process.env.STANDALONE_PORT || 5000;
 
 // Basic middleware
 app.use(express.json({ limit: '500mb' }));

@@ -60,7 +60,7 @@ node server-standalone.js
 **Expected output:**
 - No __dirname error
 - Database connection established
-- Server starts on port 3000 (or your configured port)
+- Server starts on port 5000 (or your configured port)
 - Nginx warnings are normal and don't affect functionality
 
 ## 📦 **Deployment Ready**

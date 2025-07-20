@@ -117,6 +117,7 @@ The application uses three main database tables:
   - Added fluent-ffmpeg to package-standalone.json dependencies
   - Enhanced dependency loading with better error messages and success confirmation
   - Updated server-standalone.js with clearer installation instructions when dependencies missing
+  - Changed default port from 3000 to 5000 to match main application
   - Video duration detection now works properly in standalone deployments
 - **Enhanced Docker RTMP Configuration**: Implemented robust nginx RTMP module handling
   - Updated docker-entrypoint-standalone.sh with intelligent RTMP module detection

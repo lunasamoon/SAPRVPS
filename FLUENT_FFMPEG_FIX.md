@@ -70,7 +70,7 @@ When starting server-standalone.js, you should now see:
 fluent-ffmpeg loaded successfully
 nanoid loaded successfully
 Database connection established
-Server starting on port 3000...
+Server starting on port 5000...
 ```
 
 **No more "fluent-ffmpeg not available" errors!**
