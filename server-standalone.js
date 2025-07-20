@@ -22,13 +22,16 @@ function initializeDependencies() {
   // Try to load fluent-ffmpeg for video duration detection
   try {
     ffmpeg = require('fluent-ffmpeg');
+    console.log('fluent-ffmpeg loaded successfully');
   } catch (error) {
     console.log('fluent-ffmpeg not available, duration detection disabled');
+    console.log('To enable duration detection, install: npm install fluent-ffmpeg');
   }
 
   try {
     const nanoidModule = require('nanoid');
     nanoid = nanoidModule.nanoid;
+    console.log('nanoid loaded successfully');
   } catch (error) {
     console.log('Using fallback ID generator');
     nanoid = generateId;

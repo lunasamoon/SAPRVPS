@@ -113,16 +113,22 @@ The application uses three main database tables:
   - Fixed async/await usage in dependency initialization functions
   - Fixed __dirname variable redeclaration error (removed duplicate declaration)
   - Standalone server now compatible with Node.js without "type": "module" requirement
+- **Fixed Fluent-FFmpeg Dependency Issues**: Resolved video duration detection problems in standalone server
+  - Added fluent-ffmpeg to package-standalone.json dependencies
+  - Enhanced dependency loading with better error messages and success confirmation
+  - Updated server-standalone.js with clearer installation instructions when dependencies missing
+  - Video duration detection now works properly in standalone deployments
 - **Enhanced Docker RTMP Configuration**: Implemented robust nginx RTMP module handling
   - Updated docker-entrypoint-standalone.sh with intelligent RTMP module detection
   - Created multiple nginx configurations: full RTMP support and simple fallback
   - Fixed "Nginx configuration test failed" error with graceful configuration selection
   - Added proper error handling for environments without nginx-mod-rtmp package
   - Standalone server now works with or without RTMP module support
-- **Comprehensive Documentation**: Created STANDALONE_RTMP_SETUP.md with complete setup instructions
-  - Detailed RTMP module installation guide for different operating systems
-  - Troubleshooting section for common nginx configuration issues
-  - Clear explanation of streaming capabilities with and without RTMP module
+- **Comprehensive Documentation**: Created complete setup and troubleshooting documentation
+  - STANDALONE_RTMP_SETUP.md with RTMP module installation guide for different operating systems
+  - FLUENT_FFMPEG_FIX.md with dependency resolution and installation instructions
+  - STANDALONE_SERVER_ERRORS_FIXED.md with complete error resolution guide
+  - Clear explanation of streaming capabilities with and without optional modules
 - **Created Automated Installation Script**: Built install-sa-plays-replit.sh for one-command deployment
   - Detects OS automatically (Ubuntu/Debian/CentOS/RHEL)
   - Installs all system dependencies (Node.js 20, PostgreSQL, FFmpeg, Nginx)
